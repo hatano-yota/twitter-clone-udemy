@@ -8,8 +8,9 @@ import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
-import SidebarOption from "./SidebarOption";
 import { Button } from "@mui/material";
+import SidebarOption from "./SidebarOption";
+import "./Sidebar.css";
 
 const Sidebar = () => {
   return (
