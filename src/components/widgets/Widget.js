@@ -26,7 +26,7 @@ const Widget = () => {
         />
         <TwitterShareButton
           url={"https://twitter.com/katakoto_666"}
-          options={{ text: "#絢音ちゃん尊い", via: "katakoto_666" }}
+          options={{ text: "絢音ちゃん尊い" }}
         />
       </div>
     </div>
