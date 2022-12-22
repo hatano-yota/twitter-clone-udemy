@@ -15,7 +15,14 @@ const Timeline = () => {
       <TweetBox />
 
       {/* Post */}
-      <Post />
+      <Post
+        displayName="よた"
+        userName="katokoto_666"
+        verified={true}
+        text="すずきとゆみき尊い"
+        avatar="https://source.unsplash.com/random"
+        image="https://source.unsplash.com/random"
+      />
     </div>
   );
 };
