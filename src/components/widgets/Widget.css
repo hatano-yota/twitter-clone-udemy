@@ -32,3 +32,9 @@
 #twitter-widget-2 {
   margin-top: 5px;
 }
+@media screen and (max-width: 480px) {
+  /* 480px以下に適用されるCSS（スマホ用） */
+  .widgets {
+    display: none;
+  }
+}
