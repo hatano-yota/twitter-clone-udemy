@@ -18,3 +18,9 @@
   font-size: 20px;
   font-weight: 800;
 }
+@media screen and (max-width: 480px) {
+  /* 480px以下に適用されるCSS（スマホ用） */
+  .timeline {
+    flex: 1;
+  }
+}
