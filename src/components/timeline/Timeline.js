@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import FlipMove from "react-flip-move";
 import "./Timeline.css";
 import TweetBox from "./TweetBox";
 import Post from "./Post";
@@ -38,17 +39,19 @@ const Timeline = () => {
       <TweetBox />
 
       {/* Post */}
-      {posts.map((post) => (
-        <Post
-          key={post.text} //仮置き
-          displayName={post.displayName}
-          userName={post.userName}
-          verified={post.verified}
-          text={post.text}
-          avatar={post.avatar}
-          image={post.image}
-        />
-      ))}
+      <FlipMove>
+        {posts.map((post) => (
+          <Post
+            key={post.text} //仮置き
+            displayName={post.displayName}
+            userName={post.userName}
+            verified={post.verified}
+            text={post.text}
+            avatar={post.avatar}
+            image={post.image}
+          />
+        ))}
+      </FlipMove>
     </div>
   );
 };
