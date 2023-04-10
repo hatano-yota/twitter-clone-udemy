@@ -1,5 +1,5 @@
 import { Avatar, Button } from "@mui/material";
-import React, { useState } from "react";
+import React, { SyntheticEvent, useState } from "react";
 import "./TweetBox.css";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import db from "../../firebase";
@@ -8,7 +8,7 @@ const TweetBox = () => {
   const [tweetMessage, setTweetMessage] = useState("");
   const [tweetImage, setTweetImage] = useState("");
 
-  const sendTweet = (e) => {
+  const sendTweet = (e: SyntheticEvent) => {
     // firebaseのデータベースにデータを追加する
     e.preventDefault();
 

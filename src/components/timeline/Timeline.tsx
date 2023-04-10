@@ -11,9 +11,10 @@ import {
   orderBy,
   query,
 } from "firebase/firestore";
+import { PostType } from "@/types/Types";
 
 const Timeline = () => {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState<PostType[]>([]);
   useEffect(() => {
     const postData = collection(db, "posts");
     const q = query(postData, orderBy("timestamp", "desc"));
@@ -24,7 +25,7 @@ const Timeline = () => {
 
     // リアルタイムでデータを取得
     onSnapshot(q, (querySnapshot) => {
-      setPosts(querySnapshot.docs.map((doc) => doc.data()));
+      setPosts(querySnapshot.docs.map((doc) => doc.data() as PostType));
     });
   }, []);
 

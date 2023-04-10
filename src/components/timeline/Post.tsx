@@ -6,11 +6,15 @@ import {
   VerifiedUser,
 } from "@mui/icons-material";
 import { Avatar } from "@mui/material";
-import React, { forwardRef } from "react";
+import React, { LegacyRef, forwardRef } from "react";
 import "./Post.css";
+import { PostType } from "@/types/Types";
 
 const Post = forwardRef(
-  ({ displayName, userName, verified, text, avatar, image }, ref) => {
+  (
+    { displayName, userName, verified, text, avatar, image }: PostType,
+    ref: LegacyRef<HTMLDivElement> | undefined,
+  ) => {
     return (
       <div className="post" ref={ref}>
         <div className="post_avatar">
@@ -22,8 +26,7 @@ const Post = forwardRef(
               <h3>
                 {displayName}
                 <span className="post_headerSpecial">
-                  {verified && <VerifiedUser className="post_badge" />}@
-                  {userName}
+                  {verified && <VerifiedUser className="post_badge" />}@{userName}
                 </span>
               </h3>
             </div>
@@ -41,7 +44,7 @@ const Post = forwardRef(
         </div>
       </div>
     );
-  }
+  },
 );
 
 export default Post;
